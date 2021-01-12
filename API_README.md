@@ -1,5 +1,6 @@
-##Wallet
-###1. Login Page
+#Wallet
+
+##1. Login Page
 
 http://machine_ip:5000/login
 
@@ -26,7 +27,7 @@ Response(jason):
         ]
     }
 
-###2. Add transaction
+##2. Add transaction
 
 http://machine_ip:5000/add_transaction
 
@@ -59,7 +60,7 @@ Post Response:
         ]
     }
 
-###3. Refresh(Get all transaction)
+##3. Refresh(Get all transaction)
 
 http://machine_ip:5000/get_trnsaction
 
@@ -90,7 +91,7 @@ Post Response:
     
     }
 
-###4. Join network
+##4. Join network
 
 http://machine_ip:5000/new_user
 
@@ -102,7 +103,7 @@ Response:
     "public_key": ""
     }
 
-###5. Generate Key
+##5. Generate Key
 
 http://machine_ip:5000/genrate_key
 
@@ -119,7 +120,7 @@ Post Response:
         "peivate_key": ""
     }
 
-###6. Add amount
+##6. Add amount
 
 http://machine_ip:5000/add_amount
 
@@ -150,11 +151,6 @@ Post Response:
             }
         ]
     }
-
-
-
-
-
 
 
 
