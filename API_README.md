@@ -2,14 +2,13 @@
 
 ## 1. Login Page
 
-http://machine_ip:5000/login
+https://ecoinwallet.herokuapp.com/login
 
 post request(jason format):-
 
     {
-
-        "public_key": "",
-        "private_key": ""
+        "public_key": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+        "private_key": "bc0771a448c062a1a86ad128b124473f5121c895dd8a56a1c0a2f429785b88ec"
     }
 
 Response(jason):
@@ -27,68 +26,70 @@ Response(jason):
         ]
     }
 
-## 2. Add transaction
+## 2. Send Coin
 
-http://machine_ip:5000/add_transaction
+https://ecoinwallet.herokuapp.com/send_coin
 
 Post Request(jason format):
 
     {
-        "sender_account_no": "",
-        "reciever_account_no": "",
-        "amount":00
+        "receiver": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+        "sender": "0x60355c86285aeA67DE32E218E2e1307e0ef87699",
+        "amount": 50
     }
 
 Post Response:
 
     {
-        "account_no": "",
-        "amount": 00,
-        "transaction": [
+        "amount": 40,
+        "transactions": [
             {
-                "time_stamp": "",
-                "reciever": "",
-                "amount": 00,
-                "status": ""
+                "amount": 50,
+                "receiver": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+                "sender": "0x60355c86285aeA67DE32E218E2e1307e0ef87699",
+                "status": "pending",
+                "timestamp": "2021-01-20 22:01:31.468442"
             },
             {
-                "time_stamp": "",
-                "reciever": "",
-                "amount": 00,
-                "status": ""
+                "amount": 10,
+                "receiver": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+                "sender": "0x60355c86285aeA67DE32E218E2e1307e0ef87699",
+                "status": "pending",
+                "timestamp": "2021-01-20 22:01:31.468465"
             }
         ]
     }
 
 ## 3. Refresh(Get all transaction)
 
-http://machine_ip:5000/get_trnsaction
+https://ecoinwallet.herokuapp.com/get_all_transactions
 
 Post Request:
 
     {
-        "account_no": "",
-        "type": "all/confirmed/unconfirmed"
+        "account_number": "0x60355c86285aeA67DE32E218E2e1307e0ef87699"
     }
 
 Post Response:
 
     {
-        "transaction": [
+        "amount": 40,
+        "transactions": [
             {
-                "time_stamp": "",
-                "reciever": "",
-                "amount": 00,
-                "status": ""
+                "amount": 50,
+                "receiver": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+                "sender": "0x60355c86285aeA67DE32E218E2e1307e0ef87699",
+                "status": "pending",
+                "timestamp": "2021-01-20 22:02:38.029058"
             },
             {
-                "time_stamp": "",
-                "reciever": "",
-                "amount": 00,
-                "status": ""
+                "amount": 10,
+                "receiver": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+                "sender": "0x60355c86285aeA67DE32E218E2e1307e0ef87699",
+                "status": "pending",
+                "timestamp": "2021-01-20 22:02:38.029073"
             }
         ]
-    
     }
 
 ## 4. Join network
@@ -122,32 +123,40 @@ Post Response:
 
 ## 6. Add amount
 
-http://machine_ip:5000/add_amount
+https://ecoinwallet.herokuapp.com/add_coin
 
 Post Request: 
 
     {
-        "account_number": "",
-        "amount": ""
+        "account_number": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+        "amount":1000
     }
 
 Post Response:
 
     {
-        "account_no": "",
-        "amount": 00,
-        "transaction": [
+        "amount": 100,
+        "transactions": [
             {
-                "time_stamp": "",
-                "reciever": "",
-                "amount": 00,
-                "status": ""
+                "amount": 50,
+                "receiver": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+                "sender": "0x60355c86285aeA67DE32E218E2e1307e0ef87699",
+                "status": "pending",
+                "timestamp": "2021-01-20 22:05:01.443753"
             },
             {
-                "time_stamp": "",
-                "reciever": "",
-                "amount": 00,
-                "status": ""
+                "amount": 10,
+                "receiver": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+                "sender": "0x60355c86285aeA67DE32E218E2e1307e0ef87699",
+                "status": "pending",
+                "timestamp": "2021-01-20 22:05:01.443768"
+            },
+            {
+                "amount": 1000,
+                "receiver": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+                "sender": "",
+                "status": "pending",
+                "timestamp": "2021-01-20 22:05:01.443773"
             }
         ]
     }
