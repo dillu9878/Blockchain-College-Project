@@ -14,14 +14,30 @@ post request(jason format):-
 Response(jason):
 
     {
-        "account_no": "",
-        "amount": 00,
-        "transaction": [
+        "account_number": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+        "amount": 1160,
+        "message": "logged in",
+        "transactions": [
             {
-                "time_stamp": "",
-                "reciever": "",
-                "amount": 00,
-                "status": ""
+                "amount": 50,
+                "receiver": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+                "sender": "0x60355c86285aeA67DE32E218E2e1307e0ef87699",
+                "status": "received",
+                "timestamp": "2021-01-20 22:11:55.741665"
+            },
+            {
+                "amount": 10,
+                "receiver": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+                "sender": "0x60355c86285aeA67DE32E218E2e1307e0ef87699",
+                "status": "received",
+                "timestamp": "2021-01-20 22:11:55.741665"
+            },
+            {
+                "amount": 1000,
+                "receiver": "0x28E98D1593f604e8E35EDBeb123160b90055baC3",
+                "sender": "",
+                "status": "received",
+                "timestamp": "2021-01-20 22:11:55.741665"
             }
         ]
     }
